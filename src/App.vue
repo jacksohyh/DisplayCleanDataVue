@@ -1,23 +1,38 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="chart-container">
+    <ChartView :title="'Power'" :dataType="'GenerationPower'"/>
+    <ChartView :title="'Energy'" :dataType="'GenerationEnergy'"/>
+    <!-- <ChartView :title="'Temperature'" :dataType="'CellTemp'"/> -->
+    <!-- <ChartView :title="'Chart Four'" /> --> 
+  </div>
 </template>
 
 <script setup>
-// import { defineComponent } from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
-
+import ChartView from './components/ChartView.vue';
 
 
 </script>
 
 <style>
+/* Dark background for the app */
 #app {
+  background-color: #2a2b2e;
+  /* Dark background similar to Vue Black Dashboard */
+  color: #ffffff;
+  /* White text color for readability */
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  min-height: 100vh;
+
 }
+
+/* Chart container styling for 2x2 grid */
+#chart-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);  /* Two columns, each taking up equal space */
+  gap: 20px;
+  width: 100%;
+}
+
+
+
 </style>

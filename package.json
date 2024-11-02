@@ -9,8 +9,13 @@
   },
   "dependencies": {
     "axios": "^1.7.7",
+    "chart.js": "^4.4.6",
     "core-js": "^3.8.3",
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "pinia": "^2.2.5",
     "vue": "^3.2.13",
+    "vue-chartjs": "^5.3.2",
     "vue-router": "^4.4.5"
   },
   "devDependencies": {
@@ -25,7 +30,8 @@
   "eslintConfig": {
     "root": true,
     "env": {
-      "node": true
+      "node": true,
+      "vue/setup-compiler-macros": true
     },
     "extends": [
       "plugin:vue/vue3-essential",
