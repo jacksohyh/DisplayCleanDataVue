@@ -23,5 +23,5 @@ pnpm-debug.log*
 *.sln
 *.sw?
 
-config.js
+src/config.js
 
