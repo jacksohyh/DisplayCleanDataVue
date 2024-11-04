@@ -5,7 +5,7 @@ const cors = require('cors');
 require('dotenv').config(); // Use environment variables
 
 const app = express();
-const PORT = 5000; // Local server port
+const PORT = process.env.PORT || 5000; // Use Render's dynamic port, fallback to 5000 for local
 
 // Enable CORS for local development
 app.use(cors());
