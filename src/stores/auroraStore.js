@@ -22,7 +22,7 @@ export const useAuroraStore = defineStore('auroraStore', {
 
             try {
                 // Call the local backend server to get the token
-                const response = await axios.get('http://localhost:5000/api/authenticate');
+                const response = await axios.get(`${process.env.VUE_APP_BASE_URL}/api/authenticate`);
 
                 // Assuming the token is in response.data.result
                 this.token = response.data.result; 
@@ -42,7 +42,7 @@ export const useAuroraStore = defineStore('auroraStore', {
             }
           
             try {
-              const response = await axios.get('http://localhost:5000/api/fetchData', {
+              const response = await axios.get(`${process.env.VUE_APP_BASE_URL}/api/fetchData`, {
                 headers: {
                   Authorization: `Bearer ${this.token}`, // Pass the token here
                 },
