@@ -1,7 +1,7 @@
 <template>
   <div id="chart-container">
-    <ChartView :title="'Power'" :dataType="'GenerationPower'"/>
-    <ChartView :title="'Energy'" :dataType="'GenerationEnergy'"/>
+    <ChartView :title="'Power'" />
+    <ChartView :title="'Energy'" />
     <!-- <ChartView :title="'Temperature'" :dataType="'CellTemp'"/> -->
     <!-- <ChartView :title="'Chart Four'" /> --> 
   </div>
